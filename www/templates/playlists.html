@@ -1,0 +1,57 @@
+<ion-view view-title="Playlists">
+  <ion-content>
+
+    <!-- Bilgilendirme -->
+    <div class="card">
+      <div class="item item-text-wrap text-center">
+        Enter your net in order for the following calculation tool to work
+      </div>
+    </div>
+
+   
+    <div class="list playlist-item" >
+
+       <!-- Turkce -->
+      <div class="item range range-positive range-item">
+        <p>Turkce</p>
+        <input type="range" ng-model="turkish" name="voluem" min="0" max="40" step="0.25" ng-change="calculate(turkish,social,maths,science)" >
+        <p> {{turkish}} Net</p>
+      </div>
+
+       <!-- Sosyal Bilgiler -->
+      <div class="item range range-positive range-item">
+        <p>Sosyal Bilgiler</p>
+        <input type="range" ng-model="social" name="volume" min="0" max="40" step="0.25" ng-change="calculate(turkish,social,maths,science)">
+        <p> {{sos}} Net</p>
+      </div>
+
+      <!-- Matematik -->
+      <div class="item range range-positive range-item">
+        <p>Matematik</p>
+        <input type="range" ng-model="maths" name="volume" min="0" max="40" step="0.25" ng-change="calculate(turkish,social,maths,science)">
+        <p> {{maths}} Net</p>
+      </div>
+
+       <!-- Fen Bilgisi -->
+      <div class="item range range-positive range-item">
+        <p>Fen Bilgisi</p>
+        <input type="range" ng-model="science" name="volume" min="0" max="40" step="0.25" ng-change="calculate(turkish,social,maths,science)">
+        <p> {{science}} Net</p>
+      </div>
+    </div>
+
+    <!-- YKS Puani -->
+    <div class="card">
+      <div class="item item-text-wrap text-center">
+        {{
+          result > 300 ? 
+          'You Win' : 
+          "Try Again Next Year"
+        }} 
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>
+
